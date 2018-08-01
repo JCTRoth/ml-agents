@@ -21,6 +21,9 @@ public class SoccerFieldArea : MonoBehaviour
     public AgentSoccer blueStriker;
     public AgentSoccer redGoalie;
     public AgentSoccer blueGoalie;
+    public AgentSoccer blueDefender;
+    public AgentSoccer redDefender; 
+    
     public GameObject ball;
     [HideInInspector]
     public Rigidbody ballRB;
@@ -97,11 +100,11 @@ public class SoccerFieldArea : MonoBehaviour
         {
             if (ps.agentScript.team == scoredTeam)
             {
-                RewardOrPunishPlayer(ps, academy.strikerReward, academy.goalieReward);
+                RewardOrPunishPlayer(ps, academy.strikerReward, academy.goalieReward, academy.defenderReward);
             }
             else
             {
-                RewardOrPunishPlayer(ps, academy.strikerPunish, academy.goaliePunish);
+                RewardOrPunishPlayer(ps, academy.strikerPunish, academy.goaliePunish, academy.defenderPunish);
             }
             if (academy.randomizePlayersTeamForTraining)
             {
@@ -123,8 +126,12 @@ public class SoccerFieldArea : MonoBehaviour
         }
     }
 
-    public void RewardOrPunishPlayer(PlayerState ps, float striker, float goalie)
+    public void RewardOrPunishPlayer(PlayerState ps, float striker, float goalie, float defender)
     {
+        if (ps.agentScript.agentRole == AgentSoccer.AgentRole.defender)
+        {
+            ps.agentScript.AddReward(defender);
+        }
         if (ps.agentScript.agentRole == AgentSoccer.AgentRole.striker)
         {
             ps.agentScript.AddReward(striker);
@@ -143,6 +150,10 @@ public class SoccerFieldArea : MonoBehaviour
         float xOffset = 0f;
         if (type == "red")
         {
+            if (position == "defender")
+            {
+                xOffset = 10f;
+            }
             if (position == "goalie")
             {
                 xOffset = 13f;
@@ -154,6 +165,10 @@ public class SoccerFieldArea : MonoBehaviour
         }
         if (type == "blue")
         {
+            if (position == "defender")
+            {
+                xOffset = -10f;
+            }
             if (position == "goalie")
             {
                 xOffset = -13f;

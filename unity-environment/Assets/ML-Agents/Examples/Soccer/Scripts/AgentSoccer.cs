@@ -12,7 +12,7 @@ public class AgentSoccer : Agent
     }
     public enum AgentRole
     {
-        striker, goalie
+        striker, goalie, defender
     }
     public Team team;
     public AgentRole agentRole;
@@ -88,7 +88,7 @@ public class AgentSoccer : Agent
 
         int action = Mathf.FloorToInt(act[0]);
 
-        // Goalies and Strikers have slightly different action spaces.
+        // Goalies and Strikers and Defender have slightly different action spaces.
         if (agentRole == AgentRole.goalie)
         {
             kickPower = 0f;
@@ -144,6 +144,12 @@ public class AgentSoccer : Agent
 
     public override void AgentAction(float[] vectorAction, string textAction)
     {
+        
+        // Existential penalty for defender.
+        if (agentRole == AgentRole.defender)
+        {
+            AddReward(-1f / 3000f);
+        }
         // Existential penalty for strikers.
         if (agentRole == AgentRole.striker)
         {
