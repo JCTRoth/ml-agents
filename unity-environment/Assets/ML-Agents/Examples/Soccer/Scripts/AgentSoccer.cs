@@ -144,7 +144,7 @@ public class AgentSoccer : Agent
 
     public override void AgentAction(float[] vectorAction, string textAction)
     {
-        
+
         // Existential penalty for defender.
         if (agentRole == AgentRole.defender)
         {
@@ -197,8 +197,36 @@ public class AgentSoccer : Agent
             transform.rotation = Quaternion.Euler(0f, 90f, 0f);
         }
 
-        transform.position = area.GetRandomSpawnPos(team.ToString(),
-                                                    agentRole.ToString());
+
+
+        Debug.Log("Before if goalie: " + agentRole.ToString());
+        
+        
+        //exclude goalie from reSpawn, this only works for blue
+        if (agentRole.ToString() != "goalie" && team.ToString() == "blue")
+        {
+            Debug.Log("After if goalie: " + agentRole.ToString());
+
+            transform.position = area.GetRandomSpawnPos(team.ToString(),
+                                                        agentRole.ToString());
+        }
+
+
+        if (agentRole.ToString() == "striker" && team.ToString() == "red")
+        {
+
+            transform.position = area.GetRandomSpawnPos(team.ToString(),
+                                                        agentRole.ToString());
+        }
+
+        if (agentRole.ToString() == "defender" && team.ToString() == "red")
+        {
+
+            transform.position = area.GetRandomSpawnPos(team.ToString(),
+                                                        agentRole.ToString());
+        }
+
+
 
         agentRB.velocity = Vector3.zero;
         agentRB.angularVelocity = Vector3.zero;

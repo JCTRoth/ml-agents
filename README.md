@@ -11,7 +11,16 @@
 
 * Optimised training speed
 
+* Every player type has it's own from.
+
+<img src="docs/images/asoccer_2.png" align="middle" width="3000"/>
+
+<img src="docs/images/asoccer_1.png" align="middle" width="3000"/>
+
+
 At the moment i'm aktivly working on the overall interaction.
+
+
 
 
 
