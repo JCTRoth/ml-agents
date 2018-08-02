@@ -196,8 +196,10 @@ public class AgentSoccer : Agent
             JoinBlueTeam(agentRole);
             transform.rotation = Quaternion.Euler(0f, 90f, 0f);
         }
+
         transform.position = area.GetRandomSpawnPos(team.ToString(),
                                                     agentRole.ToString());
+
         agentRB.velocity = Vector3.zero;
         agentRB.angularVelocity = Vector3.zero;
         area.ResetBall();

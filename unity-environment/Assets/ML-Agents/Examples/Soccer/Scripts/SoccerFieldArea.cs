@@ -154,9 +154,9 @@ public class SoccerFieldArea : MonoBehaviour
             {
                 xOffset = 10f;
             }
-            if (position == "goalie")
-            {
-                xOffset = 13f;
+        if (position == "goalie")
+          {
+              xOffset = 35.6f;
             }
             if (position == "striker")
             {
@@ -169,20 +169,24 @@ public class SoccerFieldArea : MonoBehaviour
             {
                 xOffset = -10f;
             }
-            if (position == "goalie")
-            {
-                xOffset = -13f;
-            }
+         if (position == "goalie")
+         {
+             xOffset = -18.1f;
+           }
             if (position == "striker")
             {
                 xOffset = -7f;
             }
         }
-        randomSpawnPos = ground.transform.position + 
-                               new Vector3(xOffset, 0f, 0f) 
-                               + (Random.insideUnitSphere * 2);
+
+        randomSpawnPos = ground.transform.position +
+                               new Vector3(xOffset, 0f, 0f);
         randomSpawnPos.y = ground.transform.position.y + 2;
+        randomSpawnPos.x = xOffset;
+
         return randomSpawnPos;
+        
+
     }
 
     void SpawnObjAtPos(GameObject obj, Vector3 pos)
