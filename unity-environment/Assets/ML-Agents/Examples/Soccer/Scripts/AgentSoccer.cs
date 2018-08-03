@@ -196,65 +196,8 @@ public class AgentSoccer : Agent
             JoinBlueTeam(agentRole);
             transform.rotation = Quaternion.Euler(0f, 90f, 0f);
         }
-
-
-
-        Debug.Log("Before if goalie: " + agentRole.ToString());
-        
-        
-        //exclude goalie from reSpawn, this only works for blue
-        if (agentRole.ToString() != "goalie" && team.ToString() == "blue")
-        {
-            Debug.Log("After if goalie: " + agentRole.ToString());
-
-            transform.position = area.GetRandomSpawnPos(team.ToString(),
-                                                        agentRole.ToString());
-        }
-
-        if (agentRole.ToString() == "striker" && team.ToString() == "blue")
-        {
-
-            transform.position = area.GetRandomSpawnPos(team.ToString(),
-                                                        agentRole.ToString());
-        }
-
-        if (agentRole.ToString() == "defender" && team.ToString() == "blue")
-        {
-
-            transform.position = area.GetRandomSpawnPos(team.ToString(),
-                                                        agentRole.ToString());
-        }
-
-        if (agentRole.ToString() == "striker" && team.ToString() == "red")
-        {
-
-            transform.position = area.GetRandomSpawnPos(team.ToString(),
-                                                        agentRole.ToString());
-        }
-
-        if (agentRole.ToString() == "defender" && team.ToString() == "red")
-        {
-
-            transform.position = area.GetRandomSpawnPos(team.ToString(),
-                                                        agentRole.ToString());
-        }
-
-        if (agentRole.ToString() == "" && team.ToString() == "")
-        {
-
-            transform.position = area.GetRandomSpawnPos(team.ToString(),
-                                                        agentRole.ToString());
-        }
-
-        if (agentRole.ToString() != "goalie")
-        {
-
-            transform.position = area.GetRandomSpawnPos(team.ToString(),
-                                                        agentRole.ToString());
-        }
-
-
-
+        transform.position = area.GetRandomSpawnPos(team.ToString(),
+                                                    agentRole.ToString());
         agentRB.velocity = Vector3.zero;
         agentRB.angularVelocity = Vector3.zero;
         area.ResetBall();
