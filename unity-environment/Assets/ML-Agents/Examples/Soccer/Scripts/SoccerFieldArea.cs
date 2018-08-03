@@ -160,7 +160,7 @@ public class SoccerFieldArea : MonoBehaviour
             }
             if (position == "defender")
             {
-                xOffset = 10f;
+                xOffset = 0f;
             }
         }
         if (type == "blue")
@@ -175,7 +175,7 @@ public class SoccerFieldArea : MonoBehaviour
             }
             if (position == "defender")
             {
-                xOffset = -10f;
+                xOffset = 0f;
             }
         }
         randomSpawnPos = ground.transform.position +

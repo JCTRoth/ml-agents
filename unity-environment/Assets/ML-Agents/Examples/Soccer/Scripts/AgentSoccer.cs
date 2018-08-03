@@ -211,6 +211,19 @@ public class AgentSoccer : Agent
                                                         agentRole.ToString());
         }
 
+        if (agentRole.ToString() == "striker" && team.ToString() == "blue")
+        {
+
+            transform.position = area.GetRandomSpawnPos(team.ToString(),
+                                                        agentRole.ToString());
+        }
+
+        if (agentRole.ToString() == "defender" && team.ToString() == "blue")
+        {
+
+            transform.position = area.GetRandomSpawnPos(team.ToString(),
+                                                        agentRole.ToString());
+        }
 
         if (agentRole.ToString() == "striker" && team.ToString() == "red")
         {
@@ -220,6 +233,20 @@ public class AgentSoccer : Agent
         }
 
         if (agentRole.ToString() == "defender" && team.ToString() == "red")
+        {
+
+            transform.position = area.GetRandomSpawnPos(team.ToString(),
+                                                        agentRole.ToString());
+        }
+
+        if (agentRole.ToString() == "" && team.ToString() == "")
+        {
+
+            transform.position = area.GetRandomSpawnPos(team.ToString(),
+                                                        agentRole.ToString());
+        }
+
+        if (agentRole.ToString() != "goalie")
         {
 
             transform.position = area.GetRandomSpawnPos(team.ToString(),
