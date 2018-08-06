@@ -21,11 +21,17 @@
 
 * Visual Observation
 
+#### Lerning Video
+
+[![Unity ML-Agents Fork of Soccer Twos - University Project - 2018-08-06 Over 2.5 million Traning Steps](https://s2-ssl.dmcdn.net/rcx4D/x240-Vrq.jpg)](https://www.dailymotion.com/video/x6rikef)
+
+#### Env. Images
+
 <img src="docs/images/asoccer_2.png" align="middle" width="3000"/>
 
 <img src="docs/images/asoccer_1.png" align="middle" width="3000"/>
 
-[![Unity ML-Agents Fork of Soccer Twos - University Project - 2018-08-06 Over 2.5 million Traning Steps](https://s2-ssl.dmcdn.net/rcx4D/x240-Vrq.jpg)](https://www.dailymotion.com/video/x6rikef)
+
 
 
 
