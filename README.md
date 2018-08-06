@@ -19,6 +19,8 @@
 
 * Added Brain with 2.5 million traning steps
 
+* Visual Observation
+
 <img src="docs/images/asoccer_2.png" align="middle" width="3000"/>
 
 <img src="docs/images/asoccer_1.png" align="middle" width="3000"/>
