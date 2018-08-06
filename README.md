@@ -3,7 +3,7 @@
 
 * Changed the GameFiled
 
-* Added "Defender" agent
+* Added "Defender" agent and brain
 
 * Changed reward system
 
@@ -11,14 +11,20 @@
 
 * Optimised training speed
 
-* Every player type has it's own from.
+* Every player type has it's own from and properties.
+
+* Added a Light to the Ball
+
+* Added: if the light-ball hits a corner the corner get illuminated (corner light reflections) 
+
+* Added Brain with 2.5 million traning steps
 
 <img src="docs/images/asoccer_2.png" align="middle" width="3000"/>
 
 <img src="docs/images/asoccer_1.png" align="middle" width="3000"/>
 
+[![Unity ML-Agents Fork of Soccer Twos - University Project - 2018-08-06 Over 2.5 million Traning Steps](https://s2-ssl.dmcdn.net/rcx4D/x240-Vrq.jpg)](https://www.dailymotion.com/video/x6rikef)
 
-At the moment i'm aktivly working on the overall interaction.
 
 
 
