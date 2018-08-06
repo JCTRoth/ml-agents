@@ -19,7 +19,7 @@
 
 * Added Brain with 2.5 million traning steps
 
-* Visual Observation
+* Indirect Visual Observation
 
 #### Lerning Video
 
